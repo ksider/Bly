@@ -1,4 +1,4 @@
-## Badge templates guide
+## BLY 1.0
 
 Use Mustache templates for badges. Templates live in `src/templates/<templateId>/` and consist of:
 1. `template.json` — metadata:
