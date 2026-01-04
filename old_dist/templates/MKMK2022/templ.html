@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" id="icon-css" href="style.css" type="text/css" media="all">
+
+
+</head>
+<body class="">
+
+<div class="badge">
+    
+<div class="badge_wrap  {{:role}}">
+
+<div class="top_Line">
+    <div class="status {{:status}}">
+        <span>{{if role === "org"}} оргкомитет {{else role === "committee" }} техкомитет {{else}} участник {{/if}}</span>
+    </div>
+</div>
+
+
+<div class="badge_name">
+   <div class="bn">
+    <div class="badge_auth firstWord">
+       {{: name.split(" ")[1] }} {{: name.split(" ")[2] }}
+            <span class="first"> {{: name.split(" ")[0] }} </span>
+    </div>
+    <div class="bar">
+        <div class="job">
+            <span> {{:job}} </span>
+        </div>
+    </div>
+   </div> 
+</div>
+
+<div class="bottom_line">
+    <div class="logo_bar">
+        <div class="logo">
+            <img src="https://iam.ras.ru/wp-content/themes/conference/img/txt_logo.png">
+        </div>
+        <div class="logo"><span>МКМК<br>•<br>2022</span></div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script>
+$(document).ready(function()  {   
+    $(".firstWord").html(function(){
+      var text= $(this).text().trim().split(" ");
+      var summary = "<span class='first'>"+text[1]+" "+text[2]+"</span>"+text[0];
+      return summary;
+    });
+});   
+    
+    // "<span class='first'>"+first+" "+second+"</span>"+ text.join(" ");
+</script>
+
+</body>
+</html>

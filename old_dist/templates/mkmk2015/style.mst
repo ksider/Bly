@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
+.badge {
+    overflow: hidden
+}
+.badge-wrap {
+    height: 100%;
+    font-family: 'PT Sans';
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    margin: 0.5mm
+}
+.badge-wrap:before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+    opacity: 1;
+    border: 0.5mm solid #f1c40f;
+    -webkit-border-top-right-radius: 30%;
+    -webkit-border-bottom-right-radius: 46%;
+    -webkit-border-bottom-left-radius: 44%;
+    -webkit-border-top-left-radius: 42%;
+    -moz-border-radius-topright: 30%;
+    -moz-border-radius-bottomright: 46%;
+    -moz-border-radius-bottomleft: 44%;
+    -moz-border-radius-topleft: 42%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 46%;
+    border-bottom-left-radius: 44%;
+    border-top-left-radius: 42%;
+    background-clip: padding-box;
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg)
+}
+.badge-wrap:after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+    opacity: 1;
+    border: 0.5mm solid #f1c40f;
+    -webkit-border-top-right-radius: 60%;
+    -webkit-border-bottom-right-radius: 76%;
+    -webkit-border-bottom-left-radius: 44%;
+    -webkit-border-top-left-radius: 52%;
+    -moz-border-radius-topright: 60%;
+    -moz-border-radius-bottomright: 76%;
+    -moz-border-radius-bottomleft: 44%;
+    -moz-border-radius-topleft: 52%;
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 76%;
+    border-bottom-left-radius: 44%;
+    border-top-left-radius: 52%;
+    background-clip: padding-box;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+}
+.badge-wrap.organizer {
+    background-color: #c0392b
+}
+.badge-wrap.organizer:after {
+    border-color: #fff
+}
+.badge-wrap.organizer:before {
+    border-color: #fff
+}
+.badge-wrap.organizer .lblock:before {
+    border-color: #fff
+}
+.badge-wrap.organizer .lblock:after {
+    border-color: #fff
+}
+.badge-wrap:nth-child(6n+1):before {
+    -webkit-transform: rotate(-9deg);
+    transform: rotate(-9deg)
+}
+.badge-wrap:nth-child(6n+1):after {
+    -webkit-transform: rotate(19deg);
+    transform: rotate(19deg)
+}
+.badge-wrap:nth-child(6n+2):before {
+    -webkit-transform: rotate(104deg);
+    transform: rotate(104deg)
+}
+.badge-wrap:nth-child(6n+2):after {
+    -webkit-transform: rotate(154deg);
+    transform: rotate(154deg)
+}
+.badge-wrap:nth-child(6n+3):before {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg)
+}
+.badge-wrap:nth-child(6n+3):after {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+}
+.badge-wrap:nth-child(6n+4):before {
+    -webkit-transform: rotate(-154deg);
+    transform: rotate(-154deg)
+}
+.badge-wrap:nth-child(6n+4):after {
+    -webkit-transform: rotate(-140deg);
+    transform: rotate(-140deg)
+}
+.badge-wrap:nth-child(6n+5):before {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg)
+}
+.badge-wrap:nth-child(6n+5):after {
+    -webkit-transform: rotate(-28deg);
+    transform: rotate(-28deg)
+}
+.badge-wrap:nth-child(6n+6):before {
+    -webkit-transform: rotate(-37deg);
+    transform: rotate(-37deg)
+}
+.badge-wrap:nth-child(6n+6):after {
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg)
+}
+.badge-wrap .lblock {
+    padding-top: 10.5mm;
+    height: 10.5mm;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+.badge-wrap .lblock:after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+    opacity: 1;
+    border: 0.5mm solid #f1c40f;
+    -webkit-border-top-right-radius: 60%;
+    -webkit-border-bottom-right-radius: 56%;
+    -webkit-border-bottom-left-radius: 44%;
+    -webkit-border-top-left-radius: 52%;
+    -moz-border-radius-topright: 60%;
+    -moz-border-radius-bottomright: 56%;
+    -moz-border-radius-bottomleft: 44%;
+    -moz-border-radius-topleft: 52%;
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 56%;
+    border-bottom-left-radius: 44%;
+    border-top-left-radius: 52%;
+    background-clip: padding-box;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg)
+}
+.badge-wrap .lblock:nth-child(1):after {
+    -webkit-transform: rotate(-181deg);
+    transform: rotate(-181deg)
+}
+.badge-wrap .logo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4mm;
+    letter-spacing: 0.4mm;
+    line-height: 4mm;
+    font-family: 'PT Mono'
+}
+.badge-wrap .logo span {
+    display: inline-block;
+    border: 0.2mm solid #fff;
+    padding: 2mm
+}
+.badge-wrap .job {
+    text-align: center;
+    font-size: 3mm;
+    width: 84mm
+}
+.badge-wrap .name {
+    margin-top: 6.5mm;
+    text-align: center;
+    font-family: 'PT Serif'
+}
+.badge-wrap .name .position {
+    font-size: 3mm;
+    line-height: 4mm;
+    font-family: 'PT Sans'
+}
+.badge-wrap .name span {
+    display: block;
+    font-size: 5.5mm;
+    line-height: 7mm
+}
+.badge-wrap .name span:first-child {
+    font-weight: 700
+}

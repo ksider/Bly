@@ -1,96 +1,60 @@
-# Bly (2025)
+## Badge templates guide
 
-A modern offline badge generator for conferences and events — built to run entirely **in your browser**.  
-No servers, no dependencies: all data and custom templates are stored in `localStorage`, so you can simply open `index.html` and start designing.
+Use Mustache templates for badges. Templates live in `src/templates/<templateId>/` and consist of:
+1. `template.json` — metadata:
+   - `name`: human‑readable title
+   - `description`: short description for the picker
+   - `size`: freeform label (e.g., `90x55mm`)
+2. `badge.mustache` — HTML fragment rendered per participant (no `<html>`/`<body>`).
+3. `theme.css` — styles scoped to the badge wrapper.
 
-## Features
+### Available participant fields
+Canonical keys exposed to Mustache and the UI:
+- Required: `id` (uuid or number), `firstName`, `lastName`
+- Recommended: `displayName`, `role`, `company`, `title`, `country`, `city`, `email`, `phone`, `qrValue`, `badgeType`, `note`
+- Event/branding (global or per-person override): `eventName`, `eventDate`, `eventLocation`, `eventLogo`, `sponsorLogo`
 
-- Import participants from JSON and search instantly.  
-- Edit, duplicate, bulk-delete, or highlight attendees.  
-- Fully customizable page and badge sizes with automatic print grid calculation.  
-- Multiple built-in templates + visual editor for creating your own (HTML/CSS + field mapping).  
-- Export participants back to JSON or reset all settings/templates in one click.  
-- Print-ready: `@media print` hides the UI and displays only badge pages.
+When authoring a template, use `{{fieldName}}` or section helpers like `{{#role}}...{{/role}}` for optional fields.
 
-## Project Structure
-
-```
-index.html                 — main interface
-assets/css/main.css        — global styles and layout for dialogs/panels
-assets/js/                 — app logic (ES modules)
-  ├─ main.js               — entry point and DOM operations
-  ├─ state.js              — state management and events
-  ├─ storage.js            — namespaced localStorage wrapper
-  ├─ template-manager.js   — built-in and user-defined templates
-  └─ utils.js              — rendering and helper functions
-templates/                 — built-in template markup + styles
-old_dist/                  — archived previous version
-```
-
-## Getting Started
-
-1. Open `index.html` locally or via any static hosting.  
-2. Choose a template — the preview updates automatically.  
-3. Import a participant list in JSON or add people manually.  
-4. Adjust page size, orientation, and margins as needed.  
-5. Click **Print** — your browser’s print dialog will handle the rest.
-
-### JSON Import Format
-
-Use an array of objects where keys match template fields:
-
-```json
-[
-  { "name": "Alexander Ivanov", "company": "RBC", "role": "Speaker" },
-  { "name": "Ekaterina Smirnova", "company": "Yandex", "role": "Attendee" }
-]
+### Sponsor logos array
+- The field `sponsorLogo` accepts either a single string (URL/dataURI) or an array of strings.
+- In the UI form, comma-separated URLs will be split into an array.
+- In Mustache, iterate with a section:
+```mustache
+{{#sponsorLogo}}
+  <img class="sponsor" src="{{.}}" alt="Sponsor logo" />
+{{/sponsorLogo}}
 ```
 
-## Custom Templates
+### Example `badge.mustache`
+```mustache
+<div class="badge-surface">
+  <div class="name">{{displayName}}</div>
+  {{#title}}<div class="title">{{title}}</div>{{/title}}
+  {{#company}}<div class="company">{{company}}</div>{{/company}}
+  {{#role}}<div class="chip">{{role}}</div>{{/role}}
+  {{#qrValue}}<div class="qr-box" data-qr="{{qrValue}}"></div>{{/qrValue}}
+</div>
+```
 
-The **Customize Template** dialog lets you:
+### Example `theme.css`
+```css
+.badge-surface {
+  display: grid;
+  gap: 2mm;
+  padding: 3mm;
+  border: 0.3mm solid #dfe3ff;
+  border-radius: 1.5mm;
+  background: #f9fbff;
+  height: 100%;
+}
+.name { font-size: 7mm; font-weight: 700; }
+.title, .company { font-size: 3mm; }
+.chip { display: inline-block; padding: 0.6mm 1.6mm; background: #0b75f5; color: #fff; border-radius: 1mm; }
+.qr-box { width: 16mm; height: 16mm; background: #fff; border: 0.3mm solid #dfe3ff; }
+```
 
-- Edit the name, description, and badge dimensions.  
-- Modify available fields (`id` → `{{id}}` in markup).  
-- Directly edit HTML and CSS in the browser.  
-
-Saved templates are marked with a `•` in the dropdown list — you can edit or delete them anytime.
-
-## Reset & Backup
-
-- **Reset Settings** — restores page layout defaults.  
-- **Clear List** — removes all participants (keeps templates).  
-- **Reset All** — clears `localStorage` completely, removing participants, settings, and templates.  
-- The previous release is available in `old_dist/`.
-
-## Browser Support
-
-Bly uses modern web APIs (`ES Modules`, `<dialog>`, Flexbox, Grid`).  
-For the best experience, use the latest versions of **Chrome**, **Edge**, **Firefox**, or **Safari**.
-
-## Contributing
-
-Contributions are welcome!  
-If you find a bug, want to suggest a feature, or improve the UI/UX, feel free to open an issue or a pull request on GitHub.
-
-**Recommended setup:**
-- Works without a server and in offline mode
-- Keep commits clean and descriptive.
-- Follow existing code style (ES modules, modern JS).
-
-## Roadmap
-
-- [ ] Add QR code and image field support  
-- [ ] Expand built-in template library  
-- [ ] Add drag-and-drop participant import  
-- [ ] Enable theme customization  
-- [ ] Create PWA version with offline caching  
-
-## License
-
-Licensed under the **MIT License**.  
-© 2025 Bly contributors.
-
----
-
-🧩 **Bly — generate and print smart badges directly from JSON, no backend required.**
+### Adding fields to the edit form
+1) Add inputs to `src/ui/components/ParticipantEditor.js` (matching the canonical field names above).
+2) If importing CSV/JSON with different column names, extend the alias map in `src/core/normalize.js`.
+3) To show new fields in the participants table, enable them via the Columns popup (or add new column labels in `ParticipantsTable.js`).

@@ -1,0 +1,19 @@
+<div class="badge_wrap {{:role}}">
+    <div class="status {{:status}}">
+        {{if role === "org"}} оргкомитет {{else role === "committee" }} техкомитет {{else}} участник {{/if}}
+    </div>
+    <div class="badge_name">
+        <div class="badge_auth firstWord">
+
+            {{: name.split(" ")[1] }} {{: name.split(" ")[2] }}
+            <span class="first"> {{: name.split(" ")[0] }} </span>
+
+        </div>
+        <div class="bar">
+            <div class="job">
+                <span> {{:job}} </span>
+            </div>
+        </div>
+    </div>
+    <div class="logo">МКМК· 2017</div>
+</div>

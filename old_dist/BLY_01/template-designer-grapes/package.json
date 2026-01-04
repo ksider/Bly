@@ -1,0 +1,23 @@
+{
+  "name": "template-designer-grapes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "grapesjs": "^0.22.13",
+    "grapesjs-blocks-basic": "^1.0.2",
+    "grapesjs-preset-webpage": "^1.0.3"
+  },
+  "devDependencies": {
+    "vite": "^7.1.12"
+  }
+}

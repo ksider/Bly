@@ -1,0 +1,34 @@
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+  body {
+    background: white;
+  }
+  .toolbar,
+  .panel,
+  .help-text {
+    display: none !important;
+  }
+  .badge-actions,
+  .modal-overlay {
+    display: none !important;
+  }
+  #app {
+    padding: 0;
+  }
+  .preview-area {
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  .page {
+    box-shadow: none;
+    border: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+    break-inside: avoid;
+    page-break-after: always;
+  }
+}

@@ -1,0 +1,82 @@
+.a4 {
+  background-image: url(https://source.unsplash.com/crs2vlkSe98/1600x900);
+  background-image: url(https://source.unsplash.com/YFlbfrxm4TM/1600x900);
+  background-size: cover;
+  background-position: left center;
+}
+.badge_wrap {
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.badge_wrap .txt {
+  margin: 0 6mm;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.badge_wrap .txt span {
+  background-color: #fff;
+  padding: 1mm;
+  display: inline-block;
+}
+.badge_wrap .txt .job {
+  font-size: 3mm;
+  margin: 2mm 0;
+  font-style: normal;
+  font-family: "PT Sans";
+}
+.badge_wrap .txt .logo {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 3mm;
+  letter-spacing: 1mm;
+  line-height: 4mm;
+  font-family: "PT Mono";
+  margin: 3mm 0;
+  font-weight: bold;
+  font-weight: normal;
+  align-self: flex-start;
+}
+.badge_wrap .txt .logo.ran {
+  color: #aaa;
+}
+.badge_wrap .txt .logo .inline {
+  display: inline-block;
+  margin-right: mm;
+}
+.badge_wrap .txt .badge_name {
+  font-size: 4mm;
+  width: 100%;
+  font-family: "PT Sans";
+  line-height: 1;
+}
+.badge_wrap .txt .badge_name .first {
+  font-size: 10mm;
+  font-weight: bold;
+  display: block;
+  font-style: normal;
+}
+.badge_wrap .txt .badge_name.null span {
+  display: none;
+}
+.badge_wrap .txt .badge_name.member span,
+.badge_wrap .txt .badge_name.subscriber span {
+  background-color: #fff;
+}
+.badge_wrap .txt .badge_name.committee span {
+  color: #fff;
+  background-color: #2980b9;
+}
+.badge_wrap .txt .badge_name.org span {
+  color: #fff;
+  background-color: #d35400;
+}

@@ -1,0 +1,32 @@
+// main: index.less
+
+.ovfh {
+    overflow-y: hidden;
+}
+
+.clearfix 
+    {
+       &:before {
+         content: " ";
+         display: table;
+       }
+       &:after {
+           clear: both;
+           content: " ";
+           display: table;
+       }
+       *zoom: 1;
+   }
+
+
+.center {text-align:center;}
+.left{text-align:left;}
+.right{text-align:right;}
+.hide{display:none;}
+.show{display:block;}
+
+abbr {
+	cursor:help;
+	border-bottom: 1px dotted;
+}
+img {max-width:100%; height:auto;}

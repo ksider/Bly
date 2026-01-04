@@ -1,0 +1,23 @@
+[
+{
+    "gist_id": "328718616b4b5dcc3515e6ebb7855564",
+    "meta"	 : {
+        "name": "Простой",
+        "slug": "simple"
+		}
+},
+{
+    "gist_id": "94d964527ac21de08d1120a8e296e3b8",
+    "meta"	 : {
+        "name": "MKMK-2015",
+        "slug": "mkmk2015"
+		}
+},
+{
+    "gist_id": "4a712f91b731e651b0a79a9a04b24a33",
+    "meta"	 : {
+        "name": "Классика",
+        "slug": "mkmk2009"
+		}
+}
+]

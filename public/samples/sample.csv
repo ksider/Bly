@@ -1,0 +1,4 @@
+id,firstName,lastName,displayName,role,company,title,email,qrValue
+1,Ada,Lovelace,Ada Lovelace,Speaker,Analytical Engines,Engineer,ada@engines.io,ada@engines.io
+2,Grace,Hopper,Grace Hopper,Keynote,Compilers Inc,Rear Admiral,grace@compilers.io,grace@compilers.io
+3,Alan,Turing,Alan Turing,Guest,Enigma Labs,Researcher,alan@enigma.ai,alan@enigma.ai

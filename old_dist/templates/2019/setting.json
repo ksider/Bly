@@ -1,0 +1,8 @@
+{
+    "meta": {
+        "name": "m2019",
+        "template": "templ.html",
+        "styleuri": "style.mst",
+        "forma": "forma.html"
+    }
+}  

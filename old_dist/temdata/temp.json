@@ -1,0 +1,506 @@
+[
+	{
+        "name": "Бакулин Владимир Николаевич",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Липанов Алексей Матвеевич",
+        "job": "",
+        "position": "д.ф.-м.н.",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/11/DSC_7822.jpg",
+        "role": "org"
+    },
+    {
+        "name": "Васильев Валерий Витальевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Левин Владимир Алексеевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Гайфуллин Александр Марксович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Мовчан Андрей Александрович",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Мишустин Илья Владимирович",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Нуштаев Дмитрий Владимирович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Столбова Ольга Серафимовны",
+        "job": "ИМСС УрО РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Тихомирова Ксения Алексеевна",
+        "job": "ИМСС УрО РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Саганов Евгений Борисович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Машихин Антон Евгеньевич",
+        "job": "МГУ имени М.В. Ломоносова",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Климов Кирилл Юрьевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Моторин Александр Сергеевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Сафронов Павел Андреевич",
+        "job": "МАИ",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Шклярчук Федор Николаевич",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Щербина Анастасия Николаевна",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Гарифуллин Ислам Рустамович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Шигапова Фаина Ахметовна",
+        "job": "КФУ",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Данилин Александр Николаевич",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Рожков Александр Георгиевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Пономарев Антон Васильевич",
+        "job": "МТУ",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Остропико Евгений Сергеевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Иванова Юлия Евгеньевна",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Кержаев Александр Петрович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Леви Михаил Олегович",
+        "job": "ЮНЦ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Ромашин Сергей Николаевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Муранов Александр Николаевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Тютюнников Николай Петрович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Жаворонок Сергей Игоревич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Вильде Мария Владимировна",
+        "job": "СГУ ",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Сарбаев Борис Сафиулович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Саввин Андрей Игоревич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Мягков Николай Николаевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Алексей Зайцев",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Турусов Роберт Алексеевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Кокшаров В. С.",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Фукалов Антон Александрович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Хуснутдинов Рустем Дарисович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Кукуджанов Константин Владимирович",
+        "job": "ИПМех РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Грибов Денис Алексеевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Шлычков Сергей Владимирович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Ластовкина Екатерина Николаевна",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Гарипова Гульназ Зуфаровна",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Зарайский Евгений Ильич",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Жестков Максим Николаевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Корнев Юрий Витальевич",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Шеховцов Валентин Валерьевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Помогайло Д.А.",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Шафоростова Мария Сергеевна",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Никита Щукин",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": ""
+    },
+    {
+        "name": "Бойко Олег Владимирович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Чжо Аунг Лин",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Колесник Кирилл Александрович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Жердецкий Андрей Сергеевич",
+        "job": "МТУ",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Бабешко Владимир Андреевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Гуськов Дмитрий Владимирович",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Николай Семенов",
+        "job": "Хот",
+        "position": "Великий Академик",
+        "city": "Moscow",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/23915403990_b741deda90_o.jpg",
+        "role": "administrator org"
+    },
+    {
+        "name": "Золотова Д.И.",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Лищер Юрий Кириллович",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Ильиных Андрей Юрьевич",
+        "job": "",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Шестаков Игорь Александрович",
+        "job": "Институт механики УрО РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    },
+    {
+        "name": "Волков Александр Владимирович",
+        "job": "ИПРИМ РАН",
+        "position": "",
+        "city": "",
+        "url": "http://iam-ras.t.ru/wp-content/uploads/sites/3/2017/09/ralph-evans-234672-150x150.jpg",
+        "role": "member"
+    }
+]

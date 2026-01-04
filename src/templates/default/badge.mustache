@@ -1,0 +1,12 @@
+<div class="badge-surface">
+  <div class="badge-header">
+    <div class="display-name">{{displayName}}</div>
+    {{#title}}<div class="title">{{title}}</div>{{/title}}
+    {{#company}}<div class="company">{{company}}</div>{{/company}}
+  </div>
+  <div class="badge-footer">
+    {{#role}}<span class="role">{{role}}</span>{{/role}}
+    {{#email}}<span class="contact">{{email}}</span>{{/email}}
+  </div>
+  {{#qrValue}}<div class="qr-holder" data-qr="{{qrValue}}"></div>{{/qrValue}}
+</div>

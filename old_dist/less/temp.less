@@ -1,0 +1,139 @@
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.badge_wrap {
+  overflow: hidden;
+  margin: 0.5mm;
+  
+  border: 0px solid #ddd;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  // background-color: #1abc9c;
+  // background-image: url(https://source.unsplash.com/kCrrUx7US04/1600x900);
+  // background-size: cover;
+  background-position: center center;
+
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.txt {
+   &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    content: " ";
+    opacity: 1;
+  }
+  &.null:before {
+    display: none;
+  }
+  &.member:before,
+  &.subscriber:before {
+    background-color: #333;
+  }
+  &.committee:before {
+    background-color: #2980b9;
+  }
+  &.org:before {
+    background-color: #d35400;
+  }
+}
+
+.badge_wrap > div {
+  position: relative;
+  z-index: 4;
+}
+.badge_wrap .status {
+  width: 100%;
+  z-index: 1;
+  height: 5mm;
+//  text-align: center;
+  align-self: flex-start;
+  margin-top: 2mm;
+  
+  text-transform: uppercase;
+  font-size: 3mm;
+  letter-spacing: 1.2mm;
+  line-height: 4mm;
+  font-family: "PT Mono";
+}
+
+.badge_wrap .badge_name {
+  font-size: 4mm;
+//  text-align: center;
+  width: 100%;
+  font-style: italic;
+  font-family: "PT Serif";
+ // font-family: "PT Sans";
+  line-height: 1.5;
+}
+.badge_wrap .badge_name .first {
+  font-size: 8mm;
+  font-style: bold;
+  display: block;
+  font-style: normal;
+}
+.badge_wrap .badge_name .job {
+//  text-align: center;
+  font-size: 3mm;
+  margin-top: 4mm;
+  font-style: normal;
+  font-family: "PT Sans";
+}
+.badge_wrap .logo {
+  width: 100%;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+//  text-align: center;
+  text-transform: uppercase;
+  font-size: 3mm;
+  letter-spacing: 1mm;
+  line-height: 4mm;
+  font-family: "PT Mono";
+  margin-bottom: 3mm;
+  font-weight: bold;
+}
+.badge_wrap .logo span {
+  font-weight: normal;
+ // color: #f39c12;
+  &.ran {
+    color: #aaa;
+  }
+}

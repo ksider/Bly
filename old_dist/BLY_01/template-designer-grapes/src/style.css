@@ -1,0 +1,171 @@
+:root {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), transparent 45%), #eef2ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100vh;
+  padding: 1rem 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.app-header {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 20px 45px -36px rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1e3a8a;
+}
+
+.app-header p {
+  margin: 0.35rem 0 0;
+  color: rgba(30, 64, 175, 0.7);
+  font-size: 0.95rem;
+}
+
+
+.workspace {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+  align-items: stretch;
+  min-height: 60vh;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 22px 60px -40px rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar h2 {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+#blocks {
+  flex: 1;
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.04);
+  padding: 0.5rem;
+}
+
+#blocks .gjs-block {
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.editor-wrapper {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px -40px rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  overflow: hidden;
+}
+
+#editor {
+  height: 100%;
+}
+
+.export-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 18px 45px -36px rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  display: grid;
+  gap: 1rem;
+}
+
+.export-panel button {
+  justify-self: flex-start;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(115deg, #2563eb, #1d4ed8);
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 16px 35px -26px rgba(37, 99, 235, 0.65);
+}
+
+.export-panel label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(15, 23, 42, 0.55);
+}
+
+.export-panel textarea {
+  width: 100%;
+  min-height: 140px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.85rem;
+  resize: vertical;
+}
+
+@media (max-width: 960px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+    flex-direction: column;
+    height: auto;
+  }
+
+  #blocks {
+    max-height: 240px;
+  }
+
+  .export-panel textarea {
+    min-height: 120px;
+  }
+}
