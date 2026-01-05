@@ -1,8 +1,0 @@
-{
-    "meta": {
-        "name": "Простой",
-        "template": "templ.html",
-        "styleuri": "style.mst",
-        "forma": "forma.html"
-    }
-}  
