@@ -81,3 +81,6 @@ Place each template in its own folder under `src/templates/<templateId>/` with f
 - `theme.css`
 
 Templates are auto-discovered at build time; after adding a folder, restart dev server or rebuild, and it will appear in the Template picker.
+
+### PDF export
+Use the toolbar button "Save PDF" to download the current preview as a PDF (rendered via html2canvas + jsPDF).

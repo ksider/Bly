@@ -1,4 +1,12 @@
-export default function Toolbar({ onImportCSV, onImportJSON, onExportCSV, onExportJSON, onReset, onPrint }) {
+export default function Toolbar({
+  onImportCSV,
+  onImportJSON,
+  onExportCSV,
+  onExportJSON,
+  onExportPDF,
+  onReset,
+  onPrint,
+}) {
   const container = document.createElement('div');
   container.className = 'toolbar pure-g';
 
@@ -44,13 +52,18 @@ export default function Toolbar({ onImportCSV, onImportJSON, onExportCSV, onExpo
   resetBtn.textContent = 'Reset';
   resetBtn.addEventListener('click', () => onReset?.());
 
+  const pdfBtn = document.createElement('button');
+  pdfBtn.className = 'pure-button';
+  pdfBtn.textContent = 'Save PDF';
+  pdfBtn.addEventListener('click', () => onExportPDF?.());
+
   const printBtn = document.createElement('button');
   printBtn.className = 'pure-button pure-button-primary';
   printBtn.textContent = 'Print';
   printBtn.addEventListener('click', () => onPrint?.());
 
   left.append(importCsvBtn, importJsonBtn, exportCsvBtn, exportJsonBtn, resetBtn);
-  right.append(printBtn);
+  right.append(pdfBtn, printBtn);
   container.append(importCsvInput, importJsonInput);
 
   importCsvInput.addEventListener('change', async (evt) => {

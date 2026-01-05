@@ -19,6 +19,8 @@
     "qrcode": "^1.5.4",
     "less": "^4.2.1",
     "prismjs": "^1.29.0",
-    "@emmetio/expand-abbreviation": "^0.7.3"
+    "@emmetio/expand-abbreviation": "^0.7.3",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
   }
 }

@@ -2,6 +2,8 @@ import 'purecss/build/pure-min.css';
 import './ui/styles/app.css';
 import './ui/styles/print.css';
 import QRCode from 'qrcode';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 import {
   addParticipant,
   deleteParticipant,
@@ -35,6 +37,7 @@ const toolbar = Toolbar({
   onImportJSON: handleJSONImport,
   onExportCSV: handleCSVExport,
   onExportJSON: handleJSONExport,
+  onExportPDF: handlePDFExport,
   onReset: () => confirm('Reset current project?') && resetProject(),
   onPrint: () => window.print(),
 });
@@ -228,6 +231,31 @@ function handleJSONImport(text) {
     setEventMeta(meta);
   }
   setParticipants([...getState().participants, ...participants]);
+}
+
+async function handlePDFExport() {
+  const state = getState();
+  const layout = computeLayout(state.pageSettings, state.badgeSettings);
+  const pages = Array.from(document.querySelectorAll('.page'));
+  if (!pages.length) {
+    alert('Nothing to export');
+    return;
+  }
+  const orientation = layout.page.widthMm > layout.page.heightMm ? 'l' : 'p';
+  const pdf = new jsPDF({
+    orientation,
+    unit: 'mm',
+    format: [layout.page.widthMm, layout.page.heightMm],
+  });
+  for (let i = 0; i < pages.length; i += 1) {
+    const canvas = await html2canvas(pages[i], { scale: 2, backgroundColor: '#ffffff' });
+    const imgData = canvas.toDataURL('image/png');
+    pdf.addImage(imgData, 'PNG', 0, 0, layout.page.widthMm, layout.page.heightMm);
+    if (i < pages.length - 1) {
+      pdf.addPage([layout.page.widthMm, layout.page.heightMm], orientation);
+    }
+  }
+  pdf.save('badges.pdf');
 }
 
 function handleCSVExport() {
