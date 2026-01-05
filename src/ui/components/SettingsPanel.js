@@ -23,11 +23,11 @@ export default function SettingsPanel({ onPageChange, onBadgeChange }) {
           <option value="landscape">Landscape</option>
         </select>
       </label>
-      <div class="grid-2">
-        <label>Margin Left (mm) <input type="number" step="0.1" name="marginLeftMm" /></label>
-        <label>Margin Right (mm) <input type="number" step="0.1" name="marginRightMm" /></label>
-        <label>Margin Top (mm) <input type="number" step="0.1" name="marginTopMm" /></label>
-        <label>Margin Bottom (mm) <input type="number" step="0.1" name="marginBottomMm" /></label>
+      <div class="grid-2 margin-fieldset">
+        <label>Margin Left<input type="number" step="0.1" name="marginLeftMm" /></label>
+        <label>Margin Right<input type="number" step="0.1" name="marginRightMm" /></label>
+        <label>Margin Top<input type="number" step="0.1" name="marginTopMm" /></label>
+        <label>Margin Bottom<input type="number" step="0.1" name="marginBottomMm" /></label>    
       </div>
     </form>
     <h3>Badge Settings</h3>
@@ -50,7 +50,7 @@ export default function SettingsPanel({ onPageChange, onBadgeChange }) {
           <option value="landscape">Landscape</option>
         </select>
       </label>
-      <div class="grid-2">
+      <div class="grid-2 margin-fieldset">
         <label>Gap X (mm) <input type="number" step="0.1" name="gapXmm" /></label>
         <label>Gap Y (mm) <input type="number" step="0.1" name="gapYmm" /></label>
       </div>

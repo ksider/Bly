@@ -54,6 +54,21 @@ When authoring a template, use `{{fieldName}}` or section helpers like `{{#role}
 .qr-box { width: 16mm; height: 16mm; background: #fff; border: 0.3mm solid #dfe3ff; }
 ```
 
+### Default event meta (sample)
+Example meta block used in `/example/sample.json` (available globally as `{{eventName}}`… and also under `{{meta.*}}`):
+```json
+{
+  "eventName": "BadgeCon 2025",
+  "eventDate": "2025-04-18",
+  "eventLocation": "Berlin, Germany",
+  "eventLogo": "https://dummyimage.com/120x40/0b75f5/ffffff&text=BadgeCon",
+  "sponsorLogo": [
+    "https://dummyimage.com/80x30/f97316/ffffff&text=Acme",
+    "https://dummyimage.com/80x30/14b8a6/ffffff&text=Beta"
+  ]
+}
+```
+
 ### Adding fields to the edit form
 1) Add inputs to `src/ui/components/ParticipantEditor.js` (matching the canonical field names above).
 2) If importing CSV/JSON with different column names, extend the alias map in `src/core/normalize.js`.

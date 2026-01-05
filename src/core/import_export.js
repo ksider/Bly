@@ -25,9 +25,10 @@ export function importFromJSON(text) {
     }
     const participants =
       Array.isArray(parsed) ? parsed : Array.isArray(parsed.participants) ? parsed.participants : [];
-    return { participants: normalizeList(participants), errors: [] };
+    const meta = !Array.isArray(parsed) && parsed.meta ? parsed.meta : {};
+    return { participants: normalizeList(participants), meta, errors: [] };
   } catch (e) {
-    return { participants: [], errors: [e] };
+    return { participants: [], meta: {}, errors: [e] };
   }
 }
 
@@ -35,6 +36,6 @@ export function exportToCSV(participants) {
   return Papa.unparse(participants);
 }
 
-export function exportToJSON(participants) {
-  return JSON.stringify(participants, null, 2);
+export function exportToJSON(participants, meta = {}) {
+  return JSON.stringify({ meta, participants }, null, 2);
 }

@@ -13,6 +13,13 @@ export const badgePresets = {
 
 export const defaultState = {
   participants: [],
+  eventMeta: {
+    eventName: '',
+    eventDate: '',
+    eventLocation: '',
+    eventLogo: '',
+    sponsorLogo: '',
+  },
   pageSettings: {
     paperSize: 'A4',
     customWidthMm: 210,

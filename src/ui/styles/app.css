@@ -2,7 +2,7 @@
 
 :root {
   --bg: #f7f8fb;
-  --panel: #ffffff;
+  --panel: #cfcfcf;
   --border: #e2e5ec;
   --accent: #0b75f5;
   --text: #1b1f3b;
@@ -41,6 +41,12 @@ body {
   margin-top: 0;
 }
 
+.panel input.pure-input-1,
+.panel select.pure-input-1 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -51,6 +57,11 @@ body {
   margin-bottom: 12px;
   align-items: center;
 }
+
+.margin-fieldset input {
+    display: block;
+    width: 5em;
+  }
 
 .panel-header {
   display: flex;
@@ -157,6 +168,17 @@ body {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 12px;
+}
+
+.pure-control-group {
+  width: 100%;
+}
+
+.pure-control-group input,
+.pure-control-group select,
+.pure-control-group textarea {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .stack > * + * {

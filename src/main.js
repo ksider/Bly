@@ -14,6 +14,7 @@ import {
   subscribe,
   updateParticipant,
   setTableColumns,
+  setEventMeta,
 } from './store/store.js';
 import { computeLayout } from './core/layout_calc.js';
 import { paginate } from './core/paginator.js';
@@ -21,6 +22,7 @@ import { renderBadge, templateStylesFor, usedFields } from './core/template_engi
 import { attachPrintHandlers } from './core/print.js';
 import { importFromCSV, importFromJSON, exportToCSV, exportToJSON } from './core/import_export.js';
 import SettingsPanel from './ui/components/SettingsPanel.js';
+import EventMetaPanel from './ui/components/EventMetaPanel.js';
 import ParticipantsTable from './ui/components/ParticipantsTable.js';
 import ParticipantEditor from './ui/components/ParticipantEditor.js';
 import TemplatePicker from './ui/components/TemplatePicker.js';
@@ -40,6 +42,10 @@ const toolbar = Toolbar({
 const settingsPanel = SettingsPanel({
   onPageChange: (payload) => setPageSettings(payload),
   onBadgeChange: (payload) => setBadgeSettings(payload),
+});
+
+const eventMetaPanel = EventMetaPanel({
+  onChange: (payload) => setEventMeta(payload),
 });
 
 const participantEditor = ParticipantEditor({
@@ -80,7 +86,7 @@ workspace.className = 'workspace';
 
 const leftColumn = document.createElement('div');
 leftColumn.className = 'stack';
-leftColumn.append(settingsPanel.element, templatePicker.element, participantsTable.element);
+leftColumn.append(settingsPanel.element, templatePicker.element, eventMetaPanel.element, participantsTable.element);
 
 const rightColumn = document.createElement('div');
 rightColumn.className = 'stack preview-wrapper';
@@ -99,6 +105,7 @@ function renderApp(state) {
   const layout = computeLayout(state.pageSettings, state.badgeSettings);
   settingsPanel.update(state, layout);
   templatePicker.update(state.templateId);
+  eventMetaPanel.update(state.eventMeta);
   participantEditor.setVisibleFields(usedFields(state.templateId));
   participantsTable.update(state.participants, state.tableColumns);
   layoutStyle.textContent = templateStylesFor(state.templateId);
@@ -141,7 +148,11 @@ function renderPages(state, layout) {
       if (participant) {
         const badgeWrapper = document.createElement('div');
         badgeWrapper.className = 'badge template-theme';
-        badgeWrapper.innerHTML = renderBadge(participant, state.templateId);
+        badgeWrapper.innerHTML = renderBadge(
+          { ...state.eventMeta, ...participant },
+          state.templateId,
+          state.eventMeta
+        );
         const actions = document.createElement('div');
         actions.className = 'badge-actions';
 
@@ -208,10 +219,13 @@ function handleCSVImport(text) {
 }
 
 function handleJSONImport(text) {
-  const { participants, errors } = importFromJSON(text);
+  const { participants, meta, errors } = importFromJSON(text);
   if (errors.length) {
     alert(`JSON errors: ${errors.map((e) => e.message || e).join('\n')}`);
     return;
+  }
+  if (meta && Object.keys(meta).length) {
+    setEventMeta(meta);
   }
   setParticipants([...getState().participants, ...participants]);
 }
@@ -222,7 +236,7 @@ function handleCSVExport() {
 }
 
 function handleJSONExport() {
-  const json = exportToJSON(getState().participants);
+  const json = exportToJSON(getState().participants, getState().eventMeta);
   downloadFile(json, 'participants.json', 'application/json');
 }
 

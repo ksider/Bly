@@ -1,12 +1,43 @@
-<div class="badge-surface">
-  <div class="badge-header">
-    <div class="display-name">{{displayName}}</div>
-    {{#title}}<div class="title">{{title}}</div>{{/title}}
-    {{#company}}<div class="company">{{company}}</div>{{/company}}
-  </div>
-  <div class="badge-footer">
-    {{#role}}<span class="role">{{role}}</span>{{/role}}
-    {{#email}}<span class="contact">{{email}}</span>{{/email}}
-  </div>
-  {{#qrValue}}<div class="qr-holder" data-qr="{{qrValue}}"></div>{{/qrValue}}
+<div class="badge-surface badge--{{badgeType}}">
+          <!-- HEADER -->
+          <div class="badge-header">
+            <div class="badge-topline">
+              <div class="badge-type">{{badgeType}}</div>
+              <div class="badge-id">ID: {{id}}</div>
+            </div>
+
+            <div class="display-name"><span class="first-name">{{firstName}}</span> <span class="last-name">{{lastName}}</span></div>
+
+            {{#title}}<div class="title">{{title}}</div>{{/title}}
+            {{#company}}<div class="company">{{company}}</div>{{/company}}
+
+            <div class="location">
+              {{#city}}<span class="city">{{city}}</span>{{/city}}{{#country}}<span class="country">, {{country}}</span>{{/country}}
+            </div>
+          </div>
+
+          <!-- BODY (опциональный блок для заметок/доп.инфы) -->
+          {{#note}}
+          <div class="badge-body">
+            <div class="note">{{note}}</div>
+          </div>
+          {{/note}}
+
+          <!-- FOOTER -->
+          <div class="badge-footer">
+            {{#role}}<span class="role">{{role}}</span>{{/role}}
+
+            <div class="contacts">
+              {{#email}}<div class="contact email">{{email}}</div>{{/email}}
+              {{#phone}}<div class="contact phone">{{phone}}</div>{{/phone}}
+            </div>
+          </div>
+
+          <!-- QR -->
+          {{#qrValue}}
+          <div class="qr-holder" data-qr="{{qrValue}}">
+            <div class="qr-caption">Scan</div>
+          </div>
+          {{/qrValue}}
 </div>
+  

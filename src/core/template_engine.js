@@ -58,9 +58,10 @@ export function usedFields(templateId = 'default') {
   return Array.from(names);
 }
 
-export function renderBadge(participant, templateId = 'default') {
+export function renderBadge(participant, templateId = 'default', meta = {}) {
   const template = getTemplate(templateId);
-  return Mustache.render(template.markup, participant);
+  const context = { ...(meta || {}), ...(participant || {}), meta: meta || {} };
+  return Mustache.render(template.markup, context);
 }
 
 export function templateStylesFor(templateId = 'default') {

@@ -58,6 +58,12 @@ export function setBadgeSettings(settings) {
   notify();
 }
 
+export function setEventMeta(meta) {
+  state.eventMeta = { ...state.eventMeta, ...meta };
+  persist();
+  notify();
+}
+
 export function setParticipants(list) {
   state.participants = [...list];
   persist();
