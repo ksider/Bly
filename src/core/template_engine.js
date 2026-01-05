@@ -1,23 +1,48 @@
 import Mustache from 'mustache';
-import templateMeta from '../templates/default/template.json';
-import badgeMarkup from '../templates/default/badge.mustache?raw';
-import templateStyles from '../templates/default/theme.css?raw';
 
-const templates = {
-  default: {
-    id: 'default',
-    meta: templateMeta,
-    markup: badgeMarkup,
-    styles: templateStyles,
-  },
-};
+const metaModules = import.meta.glob('../templates/*/template.json', { eager: true });
+const markupModules = import.meta.glob('../templates/*/badge.mustache', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+});
+const styleModules = import.meta.glob('../templates/*/theme.css', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+});
+
+function toStringModule(mod) {
+  if (typeof mod === 'string') return mod;
+  if (mod && typeof mod.default === 'string') return mod.default;
+  return '';
+}
+
+function buildTemplates() {
+  const entries = Object.entries(metaModules).map(([path, mod]) => {
+    const match = path.match(/..\/templates\/([^/]+)\//);
+    if (!match) return null;
+    const id = match[1];
+    const meta = mod?.default ?? mod;
+    const markup = toStringModule(markupModules[`../templates/${id}/badge.mustache`]);
+    const styles = toStringModule(styleModules[`../templates/${id}/theme.css`]);
+    return [id, { id, meta, markup, styles }];
+  });
+  const map = {};
+  entries.filter(Boolean).forEach(([id, tpl]) => {
+    map[id] = tpl;
+  });
+  return map;
+}
+
+const templates = buildTemplates();
 
 export function listTemplates() {
   return Object.values(templates).map(({ id, meta }) => ({ id, ...meta }));
 }
 
 export function getTemplate(id = 'default') {
-  return templates[id] || templates.default;
+  return templates[id] || templates.default || Object.values(templates)[0];
 }
 
 export function usedFields(templateId = 'default') {
@@ -39,10 +64,11 @@ export function renderBadge(participant, templateId = 'default') {
 }
 
 export function templateStylesFor(templateId = 'default') {
-  return getTemplate(templateId).styles;
+  return getTemplate(templateId)?.styles || '';
 }
 
 export function templateMetaFor(templateId = 'default') {
   const template = getTemplate(templateId);
+  if (!template) return { id: templateId };
   return { id: template.id, ...template.meta };
 }

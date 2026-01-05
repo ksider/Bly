@@ -58,3 +58,11 @@ When authoring a template, use `{{fieldName}}` or section helpers like `{{#role}
 1) Add inputs to `src/ui/components/ParticipantEditor.js` (matching the canonical field names above).
 2) If importing CSV/JSON with different column names, extend the alias map in `src/core/normalize.js`.
 3) To show new fields in the participants table, enable them via the Columns popup (or add new column labels in `ParticipantsTable.js`).
+
+### Adding new templates
+Place each template in its own folder under `src/templates/<templateId>/` with files:
+- `template.json` (name, description, size)
+- `badge.mustache`
+- `theme.css`
+
+Templates are auto-discovered at build time; after adding a folder, restart dev server or rebuild, and it will appear in the Template picker.
