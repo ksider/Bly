@@ -8,6 +8,14 @@ export default function TemplatePicker({ onSelect }) {
   heading.textContent = 'Template';
   container.appendChild(heading);
 
+  const playgroundLink = document.createElement('a');
+  playgroundLink.href = '/template-playground/index.html';
+  playgroundLink.target = '_blank';
+  playgroundLink.rel = 'noreferrer';
+  playgroundLink.textContent = 'Open template playground';
+  playgroundLink.className = 'help-text';
+  container.appendChild(playgroundLink);
+
   const select = document.createElement('select');
   select.className = 'pure-input-1';
 

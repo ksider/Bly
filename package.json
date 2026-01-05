@@ -16,6 +16,9 @@
     "mustache": "^4.2.0",
     "papaparse": "^5.5.3",
     "purecss": "^3.0.0",
-    "qrcode": "^1.5.4"
+    "qrcode": "^1.5.4",
+    "less": "^4.2.1",
+    "prismjs": "^1.29.0",
+    "@emmetio/expand-abbreviation": "^0.7.3"
   }
 }

@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "eventName": "BadgeCon 2025",
+    "eventDate": "2025-04-18",
+    "eventLocation": "Berlin, Germany",
+    "eventLogo": "https://dummyimage.com/120x40/0b75f5/ffffff&text=BadgeCon",
+    "sponsorLogo": [
+      "https://dummyimage.com/80x30/f97316/ffffff&text=Acme",
+      "https://dummyimage.com/80x30/14b8a6/ffffff&text=Beta"
+    ]
+  },
+  "participants": [
+    {
+      "id": "p-101",
+      "firstName": "Mara",
+      "lastName": "Lopez",
+      "displayName": "Mara Lopez",
+      "role": "Product Lead",
+      "company": "Northridge Labs",
+      "title": "Head of Product",
+      "country": "DE",
+      "city": "Berlin",
+      "email": "mara@example.com",
+      "phone": "+49 123 555 0101",
+      "qrValue": "https://badgecon.dev/mara",
+      "badgeType": "VIP",
+      "note": "Moderates day 1 panel"
+    },
+    {
+      "id": "p-102",
+      "firstName": "Leo",
+      "lastName": "Fischer",
+      "displayName": "Leo Fischer",
+      "role": "Engineer",
+      "company": "Helix Robotics",
+      "title": "Firmware Engineer",
+      "country": "AT",
+      "city": "Vienna",
+      "email": "leo@example.com",
+      "phone": "+43 555 0102",
+      "qrValue": "https://badgecon.dev/leo",
+      "badgeType": "Standard",
+      "note": ""
+    },
+    {
+      "id": "p-103",
+      "firstName": "Priya",
+      "lastName": "Sharma",
+      "displayName": "Priya Sharma",
+      "role": "Researcher",
+      "company": "DataWeave",
+      "title": "Data Scientist",
+      "country": "IN",
+      "city": "Bengaluru",
+      "email": "priya@example.com",
+      "phone": "+91 98765 43210",
+      "qrValue": "https://badgecon.dev/priya",
+      "badgeType": "Speaker",
+      "note": "Talk: Human-centered ML"
+    }
+  ]
+}
