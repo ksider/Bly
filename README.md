@@ -11,11 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://youtu.be/h7YLR_UxiDI?si=qFUowlEJs7H8EUKS">
-    <img alt="Watch the demo" src="https://img.youtube.com/vi/h7YLR_UxiDI/maxresdefault.jpg" width="720" />
-  </a>
+  <img alt="Demo" src="assets/demo.gif" width="720" />
 </p>
-
 
 ## Table of contents
 - [Features](#features)
