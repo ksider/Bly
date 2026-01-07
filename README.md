@@ -1,86 +1,142 @@
-## BLY 1.0
+<p align="center">
+  <img src="assets/logo.svg" alt="Badge Maker" width="320" />
+</p>
+<h1 align="center">Badge Maker</h1>
+<p align="center">Print-first badge builder with CSV/JSON import, Mustache templates, and precise mm layout.</p>
+<p align="center">
+  <a href="https://vitejs.dev/"><img alt="Vite" src="https://img.shields.io/badge/Vite-7.x-646CFF?logo=vite&logoColor=fff" /></a>
+  <a href="https://purecss.io/"><img alt="PureCSS" src="https://img.shields.io/badge/PureCSS-3.x-000?logo=pure&logoColor=fff" /></a>
+  <a href="https://github.com/janl/mustache.js/"><img alt="Mustache" src="https://img.shields.io/badge/Mustache-4.x-000?logo=mustache" /></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-green" /></a>
+</p>
 
-Use Mustache templates for badges. Templates live in `src/templates/<templateId>/` and consist of:
-1. `template.json` — metadata:
-   - `name`: human‑readable title
-   - `description`: short description for the picker
-   - `size`: freeform label (e.g., `90x55mm`)
-2. `badge.mustache` — HTML fragment rendered per participant (no `<html>`/`<body>`).
-3. `theme.css` — styles scoped to the badge wrapper.
+## Table of contents
+- [Features](#features)
+- [Quick start](#quick-start)
+- [Data formats](#data-formats)
+- [Templates](#templates)
+- [Template sandbox](#template-sandbox)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
 
-### Available participant fields
-Canonical keys exposed to Mustache and the UI:
+## Features
+- Print-first layout in mm with A4, Letter, or Custom page sizes
+- CSV/JSON import with column normalization and schema validation
+- Mustache templates with theme CSS
+- Inline participant editing and badge preview
+- PDF export and print support
+- Local storage persistence
+
+## Quick start
+```bash
+npm install
+npm run dev
+```
+Open the app, import CSV/JSON, choose template, and print or export PDF.
+
+## Data formats
+
+### CSV
+Supported headers (any subset). Unknown columns are ignored unless mapped in `src/core/normalize.js`.
+
+Canonical fields:
 - Required: `id` (uuid or number), `firstName`, `lastName`
 - Recommended: `displayName`, `role`, `company`, `title`, `country`, `city`, `email`, `phone`, `qrValue`, `badgeType`, `note`
 - Event/branding (global or per-person override): `eventName`, `eventDate`, `eventLocation`, `eventLogo`, `sponsorLogo`
 
-When authoring a template, use `{{fieldName}}` or section helpers like `{{#role}}...{{/role}}` for optional fields.
+Example CSV:
+```csv
+id,firstName,lastName,displayName,role,company,title,email,qrValue
+P-0001,Nikolay,Semenov,Nikolay Semenov,Speaker,Bpacks Lab,Materials Scientist,nikolay@example.com,https://example.com/checkin/P-0001
+```
+
+### JSON
+Two supported shapes:
+1) Array of participants
+2) Object with `participants` and optional `meta`
+
+Example (array):
+```json
+[
+  {
+    "id": "P-0001",
+    "firstName": "Nikolay",
+    "lastName": "Semenov",
+    "displayName": "Nikolay Semenov",
+    "role": "Speaker",
+    "company": "Bpacks Lab",
+    "title": "Materials Scientist",
+    "email": "nikolay@example.com",
+    "qrValue": "https://example.com/checkin/P-0001"
+  }
+]
+```
+
+Example (with meta):
+```json
+{
+  "meta": {
+    "eventName": "BadgeCon 2025",
+    "eventDate": "2025-04-18",
+    "eventLocation": "Berlin, Germany",
+    "eventLogo": "https://dummyimage.com/120x40/0b75f5/ffffff&text=BadgeCon",
+    "sponsorLogo": [
+      "https://dummyimage.com/80x30/f97316/ffffff&text=Acme",
+      "https://dummyimage.com/80x30/14b8a6/ffffff&text=Beta"
+    ]
+  },
+  "participants": [
+    {
+      "id": "P-0001",
+      "firstName": "Nikolay",
+      "lastName": "Semenov",
+      "displayName": "Nikolay Semenov",
+      "role": "Speaker"
+    }
+  ]
+}
+```
+
+Notes:
+- `displayName` is optional; if missing it falls back to `firstName + lastName`.
+- `sponsorLogo` can be a string or an array of strings.
+- Any per-person `event*` fields override the global `meta` values.
+
+## Templates
+Templates live in `src/templates/<templateId>/` and are auto-discovered.
+Each folder contains:
+- `template.json` (name, description, size)
+- `badge.mustache`
+- `theme.css`
+
+Use Mustache tags like `{{fieldName}}` and section helpers for optional fields:
+```mustache
+{{#role}}<div class="chip">{{role}}</div>{{/role}}
+```
 
 ### Sponsor logos array
-- The field `sponsorLogo` accepts either a single string (URL/dataURI) or an array of strings.
-- In the UI form, comma-separated URLs will be split into an array.
-- In Mustache, iterate with a section:
+The field `sponsorLogo` accepts either a single string or an array of strings.
+In the UI form, comma-separated URLs are split into an array.
+
 ```mustache
 {{#sponsorLogo}}
   <img class="sponsor" src="{{.}}" alt="Sponsor logo" />
 {{/sponsorLogo}}
 ```
 
-### Example `badge.mustache`
-```mustache
-<div class="badge-surface">
-  <div class="name">{{displayName}}</div>
-  {{#title}}<div class="title">{{title}}</div>{{/title}}
-  {{#company}}<div class="company">{{company}}</div>{{/company}}
-  {{#role}}<div class="chip">{{role}}</div>{{/role}}
-  {{#qrValue}}<div class="qr-box" data-qr="{{qrValue}}"></div>{{/qrValue}}
-</div>
-```
+## Template sandbox
+CodePen sandbox for quick experiments:
+- https://codepen.io/ksider/pen/bNeEyPr
 
-### Example `theme.css`
-```css
-.badge-surface {
-  display: grid;
-  gap: 2mm;
-  padding: 3mm;
-  border: 0.3mm solid #dfe3ff;
-  border-radius: 1.5mm;
-  background: #f9fbff;
-  height: 100%;
-}
-.name { font-size: 7mm; font-weight: 700; }
-.title, .company { font-size: 3mm; }
-.chip { display: inline-block; padding: 0.6mm 1.6mm; background: #0b75f5; color: #fff; border-radius: 1mm; }
-.qr-box { width: 16mm; height: 16mm; background: #fff; border: 0.3mm solid #dfe3ff; }
-```
+## Roadmap
+- Template packs gallery with thumbnails
+- Per-template editor fields configuration
+- Batch QR export and SVG QR option
+- Layout presets per paper vendor
 
-### Default event meta (sample)
-Example meta block used in `/example/sample.json` (available globally as `{{eventName}}`… and also under `{{meta.*}}`):
-```json
-{
-  "eventName": "BadgeCon 2025",
-  "eventDate": "2025-04-18",
-  "eventLocation": "Berlin, Germany",
-  "eventLogo": "https://dummyimage.com/120x40/0b75f5/ffffff&text=BadgeCon",
-  "sponsorLogo": [
-    "https://dummyimage.com/80x30/f97316/ffffff&text=Acme",
-    "https://dummyimage.com/80x30/14b8a6/ffffff&text=Beta"
-  ]
-}
-```
+## Contributing
+Issues and PRs are welcome. Keep changes focused and include a short description.
 
-### Adding fields to the edit form
-1) Add inputs to `src/ui/components/ParticipantEditor.js` (matching the canonical field names above).
-2) If importing CSV/JSON with different column names, extend the alias map in `src/core/normalize.js`.
-3) To show new fields in the participants table, enable them via the Columns popup (or add new column labels in `ParticipantsTable.js`).
-
-### Adding new templates
-Place each template in its own folder under `src/templates/<templateId>/` with files:
-- `template.json` (name, description, size)
-- `badge.mustache`
-- `theme.css`
-
-Templates are auto-discovered at build time; after adding a folder, restart dev server or rebuild, and it will appear in the Template picker.
-
-### PDF export
-Use the toolbar button "Save PDF" to download the current preview as a PDF (rendered via html2canvas + jsPDF).
+## License
+MIT. See `LICENSE`.
