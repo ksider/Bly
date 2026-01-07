@@ -11,7 +11,11 @@
 </p>
 
 <p align="center">
-  <img alt="Demo" src="assets/demo.gif" width="720" />
+  <a href="rec.mov">
+    <img alt="Demo" src="assets/demo.gif" width="720" />
+  </a>
+  <br />
+  <a href="Screen Recording 2026-01-07 at 14.22.20.mov">Watch full video</a>
 </p>
 
 ## Table of contents
