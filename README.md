@@ -14,8 +14,6 @@
   <a href="https://youtu.be/ocSTHrPq3Io">
     <img alt="Demo" src="assets/demo.gif" width="720" />
   </a>
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ocSTHrPq3Io?si=YOwa9Y7HP-XIFEiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </p>
 
 ## Table of contents
