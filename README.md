@@ -9,7 +9,7 @@
   <a href="https://github.com/janl/mustache.js/"><img alt="Mustache" src="https://img.shields.io/badge/Mustache-4.x-000?logo=mustache" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-green" /></a>
 </p>
-[[![Watch the demo](assets/logo.svg)](Screenity.mp4)]
+[![Watch the demo](assets/logo.svg)](Screenity.mp4)
 
 ## Table of contents
 - [Features](#features)
