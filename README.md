@@ -9,7 +9,13 @@
   <a href="https://github.com/janl/mustache.js/"><img alt="Mustache" src="https://img.shields.io/badge/Mustache-4.x-000?logo=mustache" /></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-green" /></a>
 </p>
-[![Watch the demo](https://img.youtube.com/vi/h7YLR_UxiDI/maxresdefault.jpg)](https://youtu.be/h7YLR_UxiDI?si=qFUowlEJs7H8EUKS)
+
+<p align="center">
+  <a href="https://youtu.be/h7YLR_UxiDI?si=qFUowlEJs7H8EUKS">
+    <img alt="Watch the demo" src="https://img.youtube.com/vi/h7YLR_UxiDI/maxresdefault.jpg" width="720" />
+  </a>
+</p>
+
 
 ## Table of contents
 - [Features](#features)
