@@ -34,6 +34,12 @@ export default function TemplatePicker({ onSelect }) {
   description.className = 'help-text';
   container.appendChild(description);
 
+  const sandbox = document.createElement('p');
+  sandbox.className = 'help-text';
+  sandbox.innerHTML =
+    'Template sandbox: <a href="https://codepen.io/ksider/pen/bNeEyPr" target="_blank" rel="noreferrer">open in CodePen</a>';
+  container.appendChild(sandbox);
+
   function update(templateId) {
     select.value = templateId;
     const selected = templates.find((t) => t.id === templateId) || templates[0];
